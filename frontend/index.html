@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Student Management System</h1>
+        <p>Manage student records</p>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+
+        <button onclick="showSection('addSection')">
+            Add Student
+        </button>
+
+        <button onclick="showSection('viewSection')">
+            View All Students
+        </button>
+
+        <button onclick="showSection('oneStudentSection')">
+            View One Student
+        </button>
+
+        <button onclick="showSection('updateSection')">
+            Update Student
+        </button>
+
+        <button onclick="showSection('deleteSection')">
+            Delete Student
+        </button>
+
+    </nav>
+
+
+    <main>
+
+
+        <!-- ========================= -->
+        <!-- ADD STUDENT -->
+        <!-- ========================= -->
+
+        <section id="addSection" class="section">
+
+            <h2>Add Student</h2>
+
+            <form id="addStudentForm">
+
+                <label>Student Name</label>
+
+                <input
+                    type="text"
+                    id="addName"
+                    placeholder="Enter student name"
+                    required
+                >
+
+
+                <label>Marks</label>
+
+                <input
+                    type="number"
+                    id="addMarks"
+                    placeholder="Enter marks"
+                    required
+                >
+
+
+                <label>Course</label>
+
+                <input
+                    type="text"
+                    id="addCourse"
+                    placeholder="Enter course"
+                    required
+                >
+
+
+                <button type="submit">
+                    Add Student
+                </button>
+
+            </form>
+
+            <p id="addMessage"></p>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- VIEW ALL STUDENTS -->
+        <!-- ========================= -->
+
+        <section id="viewSection" class="section hidden">
+
+            <h2>All Students</h2>
+
+            <button onclick="getAllStudents()">
+                Load Students
+            </button>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Marks</th>
+                        <th>Course</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- VIEW ONE STUDENT -->
+        <!-- ========================= -->
+
+        <section id="oneStudentSection" class="section hidden">
+
+            <h2>View One Student</h2>
+
+            <label>Student ID</label>
+
+            <input
+                type="number"
+                id="viewStudentId"
+                placeholder="Enter student ID"
+            >
+
+            <button onclick="getOneStudent()">
+                View Student
+            </button>
+
+            <div id="oneStudentResult"></div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- UPDATE STUDENT -->
+        <!-- ========================= -->
+
+        <section id="updateSection" class="section hidden">
+
+            <h2>Update Student</h2>
+
+            <label>Student ID</label>
+
+            <input
+                type="number"
+                id="updateId"
+                placeholder="Enter student ID"
+            >
+
+
+            <label>New Name</label>
+
+            <input
+                type="text"
+                id="updateName"
+                placeholder="Enter new name"
+            >
+
+
+            <label>New Marks</label>
+
+            <input
+                type="number"
+                id="updateMarks"
+                placeholder="Enter new marks"
+            >
+
+
+            <label>New Course</label>
+
+            <input
+                type="text"
+                id="updateCourse"
+                placeholder="Enter new course"
+            >
+
+
+            <button onclick="updateStudent()">
+                Update Student
+            </button>
+
+            <p id="updateMessage"></p>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- DELETE STUDENT -->
+        <!-- ========================= -->
+
+        <section id="deleteSection" class="section hidden">
+
+            <h2>Delete Student</h2>
+
+            <label>Student ID</label>
+
+            <input
+                type="number"
+                id="deleteId"
+                placeholder="Enter student ID"
+            >
+
+            <button
+                class="deleteButton"
+                onclick="deleteStudent()"
+            >
+                Delete Student
+            </button>
+
+            <p id="deleteMessage"></p>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+

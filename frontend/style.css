@@ -1,0 +1,478 @@
+:root {
+    --primary: #4F46E5;
+    --primary-dark: #4338CA;
+
+    --navy: #0F172A;
+
+    --background: #F8FAFC;
+    --card: #FFFFFF;
+
+    --text: #1E293B;
+    --text-light: #64748B;
+
+    --border: #E2E8F0;
+
+    --success: #16A34A;
+    --danger: #DC2626;
+    --danger-dark: #B91C1C;
+
+    --warning: #D97706;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--background);
+
+    color: var(--text);
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: var(--navy);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 32px 20px;
+
+    border-bottom: 4px solid var(--primary);
+}
+
+header h1 {
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #CBD5E1;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background: var(--card);
+
+    padding: 16px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+
+nav button {
+    border: 1px solid var(--border);
+
+    background: white;
+
+    color: var(--text);
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+nav button:hover {
+    background: #EEF2FF;
+
+    color: var(--primary);
+
+    border-color: #C7D2FE;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 90%;
+
+    max-width: 950px;
+
+    margin: 35px auto;
+}
+
+
+/* =========================
+   SECTIONS / CARDS
+========================= */
+
+.section {
+    background: var(--card);
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+
+    margin-bottom: 25px;
+}
+
+
+.section h2 {
+    color: var(--text);
+
+    font-size: 22px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   LABELS
+========================= */
+
+label {
+    display: block;
+
+    margin-top: 16px;
+
+    margin-bottom: 7px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: white;
+
+    color: var(--text);
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+
+input::placeholder {
+    color: #94A3B8;
+}
+
+
+input:focus {
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.10);
+}
+
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.section > button,
+form button {
+    margin-top: 20px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.section > button:hover,
+form button:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.deleteButton {
+    background: var(--danger) !important;
+}
+
+
+.deleteButton:hover {
+    background: var(--danger-dark) !important;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+#addMessage,
+#updateMessage,
+#deleteMessage {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 25px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+
+thead {
+    background: var(--navy);
+
+    color: white;
+}
+
+
+th {
+    padding: 14px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+td {
+    padding: 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 14px;
+
+    color: var(--text);
+}
+
+
+tbody tr {
+    background: white;
+
+    transition: background 0.2s ease;
+}
+
+
+tbody tr:hover {
+    background: #F8FAFC;
+}
+
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================
+   STUDENT RESULT CARD
+========================= */
+
+#oneStudentResult {
+    margin-top: 25px;
+}
+
+
+.student-card {
+    background: #F8FAFC;
+
+    border: 1px solid var(--border);
+
+    border-left: 4px solid var(--primary);
+
+    padding: 20px;
+
+    border-radius: 8px;
+}
+
+
+.student-card p {
+    margin: 10px 0;
+
+    color: var(--text);
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success {
+    color: var(--success);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error {
+    color: var(--danger);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+
+    nav {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    nav button {
+        width: 100%;
+    }
+
+
+    main {
+        width: 94%;
+
+        margin-top: 20px;
+    }
+
+
+    .section {
+        padding: 20px;
+    }
+
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+
+    table {
+        display: block;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+}
+
+
