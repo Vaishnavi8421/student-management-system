@@ -4,7 +4,7 @@
 // FASTAPI URL
 // ==========================================
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://student-management-system-1-wtrg.onrender.com";
 
 console.log("script.js is running");
 
